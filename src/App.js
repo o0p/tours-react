@@ -7,6 +7,12 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [tours, setTours] = useState([]);
 
+  const fetchTours = async () => {
+    setLoading(true);
+    const res = await fetch(url);
+    const tours = await fetch.json();
+  };
+
   if (loading) {
     return (
       <main>
