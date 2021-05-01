@@ -13,6 +13,10 @@ function App() {
     const tours = await fetch.json();
   };
 
+  useEffect(() => {
+    fetchTours();
+  }, []);
+
   if (loading) {
     return (
       <main>
