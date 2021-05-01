@@ -9,8 +9,15 @@ function App() {
 
   const fetchTours = async () => {
     setLoading(true);
-    const res = await fetch(url);
-    const tours = await res.json();
+    try {
+      const res = await fetch(url);
+      const tours = await res.json();
+      setLoading(false);
+      setTours(tours);
+    } catch (err) {
+      setLoading(false);
+      console.log(err);
+    }
   };
 
   useEffect(() => {
