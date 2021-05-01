@@ -10,7 +10,7 @@ function App() {
   const fetchTours = async () => {
     setLoading(true);
     const res = await fetch(url);
-    const tours = await fetch.json();
+    const tours = await res.json();
   };
 
   useEffect(() => {
