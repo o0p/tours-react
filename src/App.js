@@ -8,7 +8,7 @@ function App() {
   const [tours, setTours] = useState([]);
 
   const removeTour = (id) => {
-    const newTours = tours.filter((filter) => tours.id !== id);
+    const newTours = tours.filter((tour) => tour.id !== id);
     setTours(newTours);
   };
 
@@ -38,7 +38,7 @@ function App() {
   }
   return (
     <main>
-      <Tours tours={tours} />
+      <Tours tours={tours} removeTour={removeTour} />
     </main>
   );
 }
